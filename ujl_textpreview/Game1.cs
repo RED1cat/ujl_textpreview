@@ -13,10 +13,10 @@ namespace ujl_textpreview
         private SpriteBatch _spriteBatch;
         Dictionary<string, Letter> letter = new Dictionary<string, Letter>();
         string hex = "";
-        Texture2D font;
         Texture2D alfafont;
-        Texture2D BG;
-        Texture2D BG1;
+        Texture2D bg1;
+        Texture2D bg2;
+        Texture2D bg3;
 
         private void LetterInit()
         {
@@ -157,10 +157,10 @@ namespace ujl_textpreview
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            font = Content.Load<Texture2D>("font");
             alfafont = Content.Load<Texture2D>("alfa-font");
-            BG = Content.Load<Texture2D>("bg");
-            BG1 = Content.Load<Texture2D>("bg1");
+            bg1 = Content.Load<Texture2D>("bg1");
+            bg2 = Content.Load<Texture2D>("bg2");
+            bg3 = Content.Load<Texture2D>("bg3");
 
             // TODO: use this.Content to load your game content here
         }
@@ -181,7 +181,7 @@ namespace ujl_textpreview
 
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(BG, new Vector2(0, 0), Color.White);
+            _spriteBatch.Draw(bg1, new Vector2(0, 0), Color.White);
 
             LetterDraw(_spriteBatch);
 

@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            if(args.Length == 0)
+            if(args.Length > 0)
             {
-                using (var game = new Game1(""))
+                using (var game = new Game1(args[0]))
                 {
                     game.Run();
                 }
