@@ -348,6 +348,7 @@ namespace ujl_textpreview
 
             _spriteBatch.Begin();
 
+#if RELEASE
             switch (indexBg)
             {
                 case 1:
@@ -360,6 +361,7 @@ namespace ujl_textpreview
                     _spriteBatch.Draw(bg3, new Vector2(0, 0), Color.White);
                     break;
             }
+#endif
             if(textIndex != -1)
             {
                 _spriteBatch.Draw(fontBg, new Vector2(0, 0), new Rectangle(0, 0, 126, 18), Color.White);

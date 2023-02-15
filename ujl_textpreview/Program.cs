@@ -4,6 +4,13 @@
     {
         static void Main(string[] args)
         {
+#if DEBUG
+            using(var game = new Game1("54-65-73-74"))
+            {
+                game.Run();
+            }
+#else
+
             switch (args.Length)
             {
                 case 1:
@@ -40,6 +47,7 @@
                     }
                     break;
             }
+#endif
         }
     }
 }
